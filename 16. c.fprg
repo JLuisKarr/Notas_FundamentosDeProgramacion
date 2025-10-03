@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="16. c"/>
+        <attribute name="authors" value="josel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-03 02:53:45 p. m."/>
+        <attribute name="created" value="am9zZWw7Sk9TRUxVSVM7MjAyNS0xMC0wMzswMTo1NDoxMSBwLiBtLjsyNjIw"/>
+        <attribute name="edited" value="am9zZWw7Sk9TRUxVSVM7MjAyNS0xMC0wMzswMjo1Mzo0NSBwLiBtLjs0OzI3Mzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <declare name="lim" type="Integer" array="False" size=""/>
+            <output expression="&quot;Valor de n: &quot;" newline="False"/>
+            <input variable="n"/>
+            <if expression="n&lt;=0">
+                <then>
+                    <output expression="0" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="lim" expression="n*2"/>
+                    <for variable="k" start="0" end="lim-1" direction="inc" step="1">
+                        <if expression="k&lt;n">
+                            <then>
+                                <output expression="n-k&amp;&quot;, &quot;" newline="False"/>
+                            </then>
+                            <else>
+                                <if expression="k-n+1==n">
+                                    <then>
+                                        <comment text="Secuencia decremento"/>
+                                        <output expression="n*n" newline="False"/>
+                                    </then>
+                                    <else>
+                                        <comment text="Secuencia incremento"/>
+                                        <output expression="k-n+1&amp;&quot;, &quot;" newline="False"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
